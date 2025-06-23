@@ -1,0 +1,285 @@
+/* home.css - Specific styles for the Home Page */
+
+/* Hero Section (Overrides background from main.css if needed) */
+.hero-section {
+    /* Specific background for homepage hero */
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center / cover;
+    background-position: center;
+    background-size: cover;
+    padding-top: 90px; /* Adjust for fixed navbar height */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.4);
+}
+
+.hero-section h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.hero-section p {
+    font-size: 1.3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Animations for hero section */
+.hero-section .animate__animated {
+    opacity: 0; /* Hidden by default, animations.js will handle visibility */
+}
+
+/* About Section - Teaser Specific Adjustments */
+#about-section .about-img {
+    height: 450px; /* Fixed height for consistency */
+    position: relative; /* Ensure positioning context for stats-box */
+}
+
+#about-section .stats-box {
+    /* Positioning for desktop, adjusted for better fit */
+    position: absolute;
+    bottom: 30px;
+    left: auto; /* Remove specific left, let right control */
+    right: -40px; /* Adjusted to fit better without cutting text */
+    width: 300px; /* Fixed width to control overflow */
+    padding: 20px !important; /* Ensure padding inside */
+    flex-wrap: wrap; /* Ensure content wraps */
+    justify-content: center; /* Center items if wrapped */
+    background-color: rgba(26, 42, 68, 0.98); /* Make background more opaque for visibility */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.4); /* Stronger shadow for contrast */
+    border: 2px solid var(--voci-gold); /* Added gold border for professionalism */
+}
+
+#about-section .stats-box .stat-item {
+    flex: 1 1 auto; /* Allow items to grow/shrink based on content */
+    min-width: 120px; /* Minimum width for each stat item */
+}
+
+.core-values-grid .value-card {
+    background-color: white;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    height: 100%; /* Ensure cards are same height in grid */
+}
+.core-values-grid .value-card:hover {
+    background-color: var(--voci-light-blue);
+    border-color: var(--voci-blue);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+.core-values-grid .value-card i {
+    font-size: 1.8rem;
+    color: var(--voci-blue); /* Default icon color, can be overridden by specific classes */
+}
+.core-values-grid .value-card span {
+    font-size: 1rem;
+    color: var(--voci-dark-blue);
+    font-weight: 600;
+}
+
+
+/* Programs Section - Teaser Specific Adjustments */
+#programs-section .program-card {
+    min-height: 450px; /* Ensure cards have minimum height for content */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Distribute space */
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+}
+#programs-section .program-icon-circle {
+    /* Additional styling for the circles in this section */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+#programs-section .program-card:hover .program-icon-circle {
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+#programs-section .program-features {
+    padding-left: 0;
+    width: 100%;
+    margin-top: 20px;
+    text-align: left;
+}
+#programs-section .program-features li {
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+}
+#programs-section .program-features li i {
+    position: absolute;
+    left: 0;
+    top: 5px;
+}
+
+
+/* Events Section - Teaser Specific Adjustments */
+#events-section .event-item {
+    padding: 20px;
+}
+#events-section .event-date-sm {
+    font-size: 1.5rem; /* Smaller font for small date */
+    min-width: 60px;
+    max-width: 60px;
+    height: 60px;
+    font-weight: 700;
+}
+#events-section .event-date-sm small {
+    font-size: 0.65rem;
+}
+#events-section .event-info h4 a {
+    font-size: 1.1rem;
+}
+
+
+/* Testimonials Section Specific Adjustments */
+/* Reduced vertical spacing in testimonial items */
+.testimonial-item {
+    padding: 25px !important; /* Reduced padding */
+    min-height: 260px; /* Adjusted min-height to reduce overall vertical space further */
+    display: flex !important; /* Ensure flexbox for vertical centering */
+    flex-direction: column;
+    justify-content: center; /* Vertically center content */
+}
+.testimonial-item .testimonial-img {
+    margin-bottom: 8px; /* Reduced margin */
+}
+.testimonial-item .testimonial-text {
+    margin-bottom: 8px; /* Reduced margin */
+}
+.testimonial-item .testimonial-text p.lead { /* Target the specific paragraph with lead class */
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 8px; /* Keep a small bottom margin */
+    font-size: 1.05rem; /* Slightly smaller font for compactness */
+    line-height: 1.4; /* Adjusted line height for better compactness */
+}
+.testimonial-item .testimonial-text .fa-quote-left {
+    margin-bottom: 5px; /* Reduce margin below quote icon */
+}
+.testimonial-item .testimonial-text .fa-quote-right {
+    margin-top: 5px; /* Reduce margin above quote icon */
+}
+.testimonial-author {
+    margin-top: 0; /* Adjust margin if needed */
+}
+
+
+/* Resources Section - Teaser Specific Adjustments */
+#resources-section .resource-card {
+    min-height: 400px; /* Ensure consistent height for resource cards */
+}
+#resources-section .resource-img-wrapper {
+    height: 200px;
+}
+#resources-section .resource-content h3 {
+    min-height: 60px; /* Ensure title lines don't cause layout shifts */
+}
+.resource-category {
+    opacity: 1 !important; /* Ensure full opacity for text visibility */
+    /* background-color is set per color in main.css */
+    /* Adding specific overrides here for clarity if needed, but main.css should handle */
+}
+/* Specific overrides for resource category colors to be solid and visible */
+.resource-card .resource-img-wrapper .bg-voci-red {
+    background-color: var(--voci-red) !important;
+    color: white !important; /* Ensure text is white */
+}
+.resource-card .resource-img-wrapper .bg-voci-blue {
+    background-color: var(--voci-blue) !important;
+    color: white !important;
+}
+.resource-card .resource-img-wrapper .bg-voci-gold {
+    background-color: var(--voci-gold) !important;
+    color: white !important; /* Ensure text is white */
+}
+
+
+/* Responsive adjustments specific to home page */
+@media (max-width: 767.98px) {
+    .hero-section h1 {
+        font-size: 2.2rem;
+    }
+    .hero-section p {
+        font-size: 1rem;
+    }
+    #about-section .about-img {
+        height: auto; /* Allow image to scale naturally */
+    }
+    #about-section .stats-box {
+        right: 50%;
+        transform: translateX(50%);
+        width: calc(100% - 30px); /* Adjust width for mobile */
+        gap: 15px;
+        flex-direction: row; /* Keep items in a row if possible, allow wrap */
+        justify-content: space-around; /* Distribute space */
+        bottom: 15px; /* Adjust bottom position for mobile */
+        left: 15px; /* Ensure it stays within bounds */
+        right: 15px;
+        border-width: 1px; /* Thinner border on mobile */
+    }
+    #about-section .stats-box .stat-item {
+        flex: 1 1 45%; /* Two items per row on small screens */
+        min-width: unset; /* Remove min-width constraint */
+    }
+    .core-values-grid .value-card {
+        padding: 10px; /* Smaller padding on mobile */
+        margin-bottom: 10px; /* Space between value cards */
+    }
+    .core-values-grid .value-card i {
+        font-size: 1.2rem; /* Smaller icons on mobile */
+    }
+    .core-values-grid .value-card span {
+        font-size: 0.8rem; /* Smaller text on mobile */
+    }
+    #programs-section .program-card {
+        min-height: auto;
+        padding: 30px 15px;
+    }
+    #programs-section .program-features {
+        margin-top: 15px;
+    }
+    #events-section .event-card .event-img-wrapper {
+        height: 200px;
+    }
+    #events-section .event-list .event-item {
+        flex-direction: column;
+        text-align: center;
+        padding: 15px;
+    }
+    #events-section .event-date-sm {
+        margin-right: 0 !important;
+        margin-bottom: 15px;
+    }
+    #events-section .event-info {
+        margin-bottom: 15px;
+    }
+    #events-section .event-meta span {
+        display: block;
+        margin: 5px 0 !important;
+    }
+    #events-section .event-action {
+        width: 100%;
+        margin-top: 10px;
+    }
+    #resources-section .resource-card {
+        min-height: auto;
+    }
+    #resources-section .resource-img-wrapper {
+        height: 180px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #about-section .stats-box {
+        right: -30px; /* Slight overlap on tablets */
+        gap: 20px;
+        padding: 20px;
+        width: auto; /* Allow width to be determined by content + gap */
+        min-width: 280px; /* Ensure it doesn't get too small */
+    }
+}

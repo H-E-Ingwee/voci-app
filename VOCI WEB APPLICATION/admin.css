@@ -1,0 +1,180 @@
+/* admin.css - Specific styles for the Admin Dashboard */
+
+/* Page Header / Hero Section for Admin */
+.admin-hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center / cover;
+    background-position: center;
+    background-size: cover;
+    min-height: 40vh; /* Slightly shorter hero than main pages */
+    padding-top: 90px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.admin-hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.admin-hero-section p.lead {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Admin Overview Card on Dashboard */
+.admin-overview-card {
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.stat-box {
+    background-color: var(--voci-dark-blue); /* Using a primary color from main.css */
+    color: white;
+    border-radius: 10px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+}
+
+.stat-box i {
+    color: var(--voci-gold); /* Icons in gold for contrast */
+}
+
+/* General styling for admin content sections (will be dynamically loaded) */
+.admin-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    margin-top: 30px;
+    line-height: 1.8;
+}
+
+.admin-section h2 {
+    font-size: 2.2rem;
+    color: var(--voci-dark-blue);
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--voci-blue);
+}
+
+.admin-table-wrapper {
+    margin-top: 30px;
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.admin-table thead th {
+    background-color: var(--voci-blue);
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding: 15px;
+    text-align: left;
+}
+
+.admin-table tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    color: var(--voci-dark-blue);
+    font-size: 0.95rem;
+}
+
+.admin-table tbody tr:nth-child(odd) {
+    background-color: var(--voci-light-blue);
+}
+
+.admin-table tbody tr:hover {
+    background-color: #e6f3ff;
+}
+
+/* Admin forms */
+.admin-form .form-label {
+    font-weight: 700;
+    color: var(--voci-dark-blue);
+}
+
+.admin-form .form-control,
+.admin-form .form-select,
+.admin-form textarea {
+    border-radius: 8px;
+    border-color: #ddd;
+    padding: 10px 15px;
+}
+
+.admin-form .btn {
+    margin-top: 20px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .admin-hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .admin-hero-section p.lead {
+        font-size: 1rem;
+    }
+    .admin-overview-card {
+        padding: 30px;
+    }
+    .admin-section {
+        padding: 30px;
+    }
+    .admin-section h2 {
+        font-size: 1.8rem;
+    }
+    .admin-table thead th, .admin-table tbody td {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .admin-hero-section h1 {
+        font-size: 2rem;
+    }
+    .admin-hero-section p.lead {
+        font-size: 0.9rem;
+    }
+    .admin-overview-card {
+        padding: 20px;
+    }
+    .admin-section {
+        padding: 20px;
+    }
+    .admin-section h2 {
+        font-size: 1.5rem;
+    }
+    .stat-box {
+        padding: 20px !important;
+    }
+    .stat-box i {
+        font-size: 2.5rem;
+    }
+    .stat-box h4 {
+        font-size: 1.2rem;
+    }
+    .admin-table thead th, .admin-table tbody td {
+        padding: 8px;
+        font-size: 0.75rem;
+    }
+}

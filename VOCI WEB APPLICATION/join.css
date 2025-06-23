@@ -1,0 +1,206 @@
+/* join.css - Specific styles for the Join Us Page */
+
+/* Page Header / Hero Section */
+.join-hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/3184329/pexels-photo-3184329.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center / cover;
+    background-position: center;
+    background-size: cover;
+    min-height: 50vh;
+    padding-top: 90px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.join-hero-section h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.join-hero-section p.lead {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Benefits Section */
+#benefits {
+    background-color: var(--voci-light-blue);
+}
+
+.benefit-card {
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.benefit-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: var(--voci-red); /* Highlight on hover */
+}
+
+.benefit-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.benefit-card h4 {
+    font-size: 1.6rem;
+}
+.benefit-card p.small {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
+/* Join Process Section */
+#join-process {
+    background-color: var(--voci-white); /* Assuming white */
+}
+
+.process-steps .process-step-card {
+    background-color: var(--voci-light-blue);
+    border: 1px solid #eee;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+.process-steps .process-step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: var(--voci-blue); /* Highlight on hover */
+}
+
+.process-steps .step-number {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    font-weight: 700;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.process-steps h4 {
+    font-size: 1.4rem;
+}
+.process-steps p.small {
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+
+/* Membership Application Form */
+#membership-form {
+    background-color: var(--voci-white);
+}
+
+.membership-form-wrapper {
+    background-color: var(--voci-light-blue);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.membership-form-wrapper .form-control,
+.membership-form-wrapper .form-select {
+    border-radius: 50px; /* Fully rounded for inputs */
+    padding: 12px 20px;
+    border-color: #ddd;
+}
+.membership-form-wrapper textarea.form-control {
+    border-radius: 15px; /* Slightly less rounded for textarea */
+    padding: 15px 20px;
+}
+#fullPageFormMessage {
+    margin-top: 15px;
+    font-size: 0.9rem;
+}
+
+
+/* Testimonials Section (from Homepage, adapted for Join Us) */
+/* Reusing .testimonial-slider, .testimonial-item, etc. from main.css */
+/* Ensure the section background matches other sections here */
+#join-testimonials {
+    background-color: var(--voci-light-blue);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .join-hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .join-hero-section p.lead {
+        font-size: 1rem;
+    }
+    .benefit-card, .process-step-card {
+        padding: 25px;
+    }
+    .benefit-icon, .step-number {
+        width: 70px;
+        height: 70px;
+        font-size: 2.2rem;
+    }
+    .benefit-card h4, .process-step-card h4 {
+        font-size: 1.4rem;
+    }
+    .membership-form-wrapper {
+        padding: 30px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .join-hero-section h1 {
+        font-size: 2rem;
+    }
+    .join-hero-section p.lead {
+        font-size: 0.9rem;
+    }
+    .benefit-card, .process-step-card {
+        padding: 20px;
+    }
+    .benefit-icon, .step-number {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    .benefit-card h4, .process-step-card h4 {
+        font-size: 1.2rem;
+    }
+    .benefit-card p.small, .process-step-card p.small {
+        font-size: 0.8rem;
+    }
+    .membership-form-wrapper {
+        padding: 25px;
+    }
+}

@@ -1,0 +1,236 @@
+/* examination.css - Specific styles for the Examination Details Page */
+
+/* Page Header / Hero Section */
+.examination-hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/5926388/pexels-photo-5926388.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center / cover;
+    background-position: center;
+    background-size: cover;
+    min-height: 50vh;
+    padding-top: 90px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.examination-hero-section h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.examination-hero-section p.lead {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Overview Section */
+#overview {
+    background-color: var(--voci-light-blue);
+}
+
+.stats-grid .stat-item-small {
+    background-color: white;
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+.stats-grid .stat-item-small:hover {
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transform: translateY(-3px);
+    border-color: var(--voci-blue);
+}
+.stats-grid .stat-item-small i {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+.stats-grid .stat-item-small h5 {
+    font-size: 1.6rem;
+}
+
+
+.exam-day-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+}
+.exam-day-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: var(--voci-red); /* Consistent hover border */
+}
+
+.exam-day-card .icon-box {
+    width: 70px;
+    height: 70px;
+    font-size: 2.2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+.exam-day-card h4 {
+    font-size: 1.5rem;
+}
+.exam-day-card ul {
+    margin-top: 15px;
+    padding-left: 0;
+}
+.exam-day-card ul li {
+    font-size: 0.95rem;
+    color: var(--voci-gray-text);
+    margin-bottom: 5px;
+}
+.exam-day-card ul li i {
+    font-size: 0.8rem;
+}
+
+
+/* Detailed Components Section */
+#detailed-components {
+    background-color: var(--voci-white); /* Assuming white */
+}
+
+.component-block {
+    background-color: var(--voci-light-blue);
+    border: 1px solid #eee;
+    border-left: 5px solid var(--voci-blue); /* Default border highlight */
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+.component-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+    border-color: var(--voci-red); /* Highlight on hover */
+}
+
+.component-block img {
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.component-block h4 {
+    font-size: 1.5rem;
+    margin-top: 15px;
+}
+
+.details-list p {
+    font-size: 0.95rem;
+    color: var(--voci-gray-text);
+}
+.details-list i {
+    font-size: 0.9rem;
+}
+
+
+/* Certification & Next Steps Section */
+#certification-section {
+    background: linear-gradient(rgba(26, 42, 68, 0.85), rgba(26, 42, 68, 0.85)), url('https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center / cover;
+    background-attachment: fixed; /* Parallax effect */
+    color: white;
+}
+#certification-section .section-title, #certification-section .section-description {
+    color: white !important;
+}
+#certification-section .section-subtitle {
+    color: var(--voci-gold) !important;
+}
+
+.certification-details-card {
+    border: 1px solid #eee;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+.certification-details-card:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transform: translateY(-5px);
+}
+
+.check-list li {
+    font-size: 0.95rem;
+    color: var(--voci-gray-text);
+    margin-bottom: 8px;
+}
+.check-list li i {
+    font-size: 0.8rem;
+    color: var(--voci-blue); /* Default checkmark color */
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .examination-hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .examination-hero-section p.lead {
+        font-size: 1rem;
+    }
+    .exam-day-card, .component-block {
+        padding: 25px;
+    }
+    .exam-day-card h4 {
+        font-size: 1.3rem;
+    }
+    .exam-day-card .icon-box {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    .component-block img {
+        height: 200px;
+    }
+    .component-block h3 {
+        font-size: 1.8rem;
+    }
+    .details-list p, .check-list li {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .examination-hero-section h1 {
+        font-size: 2rem;
+    }
+    .examination-hero-section p.lead {
+        font-size: 0.9rem;
+    }
+    .exam-day-card, .component-block {
+        padding: 20px;
+    }
+    .exam-day-card h4 {
+        font-size: 1.2rem;
+    }
+    .exam-day-card .icon-box {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+    }
+    .component-block img {
+        height: 180px;
+    }
+    .component-block h3 {
+        font-size: 1.5rem;
+    }
+    .component-block h4 {
+        font-size: 1.3rem;
+    }
+    .stats-grid .stat-item-small h5 {
+        font-size: 1.3rem;
+    }
+    .stats-grid .stat-item-small i {
+        font-size: 1.8rem;
+    }
+}

@@ -1,0 +1,165 @@
+/* contact.css - Specific styles for the Contact Us Page */
+
+/* Page Header / Hero Section */
+.contact-hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center / cover;
+    background-position: center;
+    background-size: cover;
+    min-height: 50vh;
+    padding-top: 90px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact-hero-section h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.contact-hero-section p.lead {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Contact Info Cards */
+#contact-details {
+    background-color: var(--voci-light-blue);
+}
+
+.contact-info-card {
+    background-color: white;
+    border: 1px solid #eee;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: var(--voci-blue); /* Highlight on hover */
+}
+
+.contact-info-card .info-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+.contact-info-card h4 {
+    font-size: 1.6rem;
+}
+.contact-info-card p.small {
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+
+/* Contact Form Section */
+#contact-form {
+    background-color: var(--voci-white); /* Assuming white background */
+}
+
+.contact-form-wrapper {
+    background-color: var(--voci-light-blue);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-form-wrapper .form-control,
+.contact-form-wrapper .form-select {
+    border-radius: 50px; /* Fully rounded for inputs */
+    padding: 12px 20px;
+    border-color: #ddd;
+}
+.contact-form-wrapper textarea.form-control {
+    border-radius: 15px; /* Slightly less rounded for textarea */
+    padding: 15px 20px;
+}
+
+/* Google Map Section */
+#google-map {
+    background-color: var(--voci-light-blue);
+}
+
+.map-container {
+    height: 450px; /* Fixed height for the map iframe */
+    width: 100%;
+    overflow: hidden; /* Ensures border-radius is applied */
+    border-radius: 15px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .contact-hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .contact-hero-section p.lead {
+        font-size: 1rem;
+    }
+    .contact-info-card {
+        padding: 25px;
+    }
+    .contact-info-card .info-icon {
+        width: 70px;
+        height: 70px;
+        font-size: 2.2rem;
+    }
+    .contact-info-card h4 {
+        font-size: 1.4rem;
+    }
+    .contact-form-wrapper {
+        padding: 30px;
+    }
+    .map-container {
+        height: 350px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .contact-hero-section h1 {
+        font-size: 2rem;
+    }
+    .contact-hero-section p.lead {
+        font-size: 0.9rem;
+    }
+    .contact-info-card {
+        padding: 20px;
+    }
+    .contact-info-card .info-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 2rem;
+    }
+    .contact-info-card h4 {
+        font-size: 1.2rem;
+    }
+    .contact-info-card p.small {
+        font-size: 0.8rem;
+    }
+    .contact-form-wrapper {
+        padding: 25px;
+    }
+    .map-container {
+        height: 300px;
+    }
+}

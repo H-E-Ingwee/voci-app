@@ -1,0 +1,211 @@
+/* programs.css - Specific styles for the Programs Page */
+
+/* Page Header / Hero Section */
+.programs-hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/5668473/pexels-photo-5668473.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center / cover;
+    background-position: center;
+    background-size: cover;
+    min-height: 50vh; /* Shorter than home hero */
+    padding-top: 90px; /* Adjust for fixed navbar */
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    display: flex; /* Use flex to center content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.programs-hero-section h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.programs-hero-section p.lead {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Core Pillars Section (Main Program Display) */
+#core-pillars {
+    background-color: var(--voci-light-blue); /* Light background for this section */
+}
+
+.pillar-block {
+    background-color: white;
+    border: 1px solid #eee;
+    border-left: 5px solid var(--voci-blue); /* Default border color, overridden by theme */
+    transition: all 0.3s ease;
+    padding: 40px;
+}
+
+.pillar-block:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+}
+
+/* Specific border colors for pillars */
+#communication.pillar-block { border-left-color: var(--voci-blue); }
+#branding.pillar-block { border-left-color: var(--voci-red); }
+#leadership.pillar-block { border-left-color: var(--voci-gold); }
+
+
+.pillar-icon-large {
+    width: 90px;
+    height: 90px;
+    font-size: 2.8rem;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    flex-shrink: 0; /* Prevent icon from shrinking */
+}
+
+.pillar-block:hover .pillar-icon-large {
+    transform: scale(1.1); /* Slight enlarge on hover */
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+}
+
+.pillar-block h3 {
+    font-size: 2rem;
+    margin-top: 0; /* Align with icon */
+}
+
+.detailed-features li {
+    font-size: 1rem;
+    color: var(--voci-gray-text);
+    margin-bottom: 8px;
+}
+.detailed-features li i {
+    font-size: 0.9rem;
+}
+
+/* Certification Section */
+#certification {
+    background: linear-gradient(rgba(26, 42, 68, 0.8), rgba(26, 42, 68, 0.8)), url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center / cover;
+    background-attachment: fixed; /* Parallax effect */
+    color: white;
+}
+#certification .section-title, #certification .section-description {
+    color: white !important;
+}
+#certification .section-subtitle {
+    color: var(--voci-gold) !important;
+}
+
+.certification-badge {
+    background-color: white;
+    color: var(--voci-dark-blue);
+    padding: 50px;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+.certification-badge:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.25);
+}
+.certification-badge h3 {
+    font-size: 2.2rem;
+}
+
+
+/* Detailed Modules Section */
+/* These sections start hidden and are revealed by JS */
+.detailed-program-section { /* Shared class for communication-details, branding-details, leadership-details */
+    /* Add padding/margin as needed, background color set per section */
+}
+
+.module-card {
+    border: 1px solid #ddd;
+    background-color: white;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+.module-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    border-color: var(--voci-blue); /* Default hover highlight */
+}
+
+.module-sessions li {
+    font-size: 0.95rem;
+    color: var(--voci-gray-text);
+    margin-bottom: 5px;
+}
+.module-sessions li i {
+    color: var(--voci-red); /* Consistent bullet icon color */
+    font-size: 0.7rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .pillar-block {
+        padding: 30px;
+    }
+    .pillar-block .col-lg-5, .pillar-block .col-lg-7 {
+        order: unset !important; /* Reset order on smaller screens */
+    }
+    .pillar-icon-large {
+        width: 70px;
+        height: 70px;
+        font-size: 2.2rem;
+        float: none !important; /* Remove float on mobile */
+        margin: 0 auto 20px auto !important; /* Center on mobile */
+    }
+    .pillar-block h3 {
+        text-align: center;
+        margin-top: 15px;
+    }
+    .pillar-block p.lead {
+        text-align: center;
+    }
+    .detailed-features {
+        text-align: center;
+    }
+    .detailed-features li {
+        display: inline-block; /* Display as inline-block for better flow on mobile */
+        margin: 5px 10px;
+        text-align: left; /* Keep text aligned within its block */
+    }
+    .detailed-features li i {
+        position: static; /* Remove absolute positioning */
+        margin-right: 5px;
+    }
+    .pillar-block .btn {
+        width: 100%;
+        text-align: center;
+    }
+    .certification-badge {
+        padding: 30px;
+    }
+    .certification-badge h3 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .programs-hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .programs-hero-section p.lead {
+        font-size: 1rem;
+    }
+    .pillar-block {
+        padding: 20px;
+    }
+    .pillar-block h3 {
+        font-size: 1.6rem;
+    }
+    .pillar-block p.lead {
+        font-size: 0.95rem;
+    }
+    .detailed-features li {
+        font-size: 0.9rem;
+    }
+    .module-card h4 {
+        font-size: 1.3rem;
+    }
+    .module-sessions li {
+        font-size: 0.85rem;
+    }
+}

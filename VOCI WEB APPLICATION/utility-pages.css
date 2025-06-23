@@ -1,0 +1,113 @@
+/* utility-pages.css - Specific styles for Privacy Policy, Terms of Service, etc. */
+
+/* Page Header / Hero Section for Utility Pages */
+.utility-hero-section {
+    background: linear-gradient(rgba(26, 42, 68, 0.8), rgba(26, 42, 68, 0.8)), url('https://images.pexels.com/photos/3184325/pexels-photo-3184325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center / cover;
+    background-position: center;
+    background-size: cover;
+    min-height: 40vh; /* Slightly shorter hero for utility pages */
+    padding-top: 90px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.utility-hero-section h1 {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.utility-hero-section p.lead {
+    font-size: 1.1rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Content Section Styling */
+.content-block {
+    background-color: white; /* Content block background */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    line-height: 1.8; /* Increased line height for readability */
+    color: var(--voci-gray-text);
+}
+
+.content-block h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
+    color: var(--voci-dark-blue);
+}
+
+.content-block h3 {
+    font-size: 1.6rem;
+    margin-top: 35px;
+    margin-bottom: 15px;
+    color: var(--voci-blue); /* Section headers within content */
+}
+
+.content-block p {
+    margin-bottom: 15px;
+}
+
+.content-block ul {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 25px;
+}
+
+.content-block ul.content-list li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 8px;
+    color: var(--voci-gray-text);
+}
+.content-block ul.content-list li i {
+    font-size: 0.8rem;
+    margin-right: 10px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .utility-hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .utility-hero-section p.lead {
+        font-size: 1rem;
+    }
+    .content-block {
+        padding: 30px;
+    }
+    .content-block h2 {
+        font-size: 1.8rem;
+    }
+    .content-block h3 {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .utility-hero-section h1 {
+        font-size: 2rem;
+    }
+    .utility-hero-section p.lead {
+        font-size: 0.9rem;
+    }
+    .content-block {
+        padding: 20px;
+    }
+    .content-block h2 {
+        font-size: 1.5rem;
+    }
+    .content-block h3 {
+        font-size: 1.2rem;
+    }
+    .content-block p, .content-block ul.content-list li {
+        font-size: 0.9rem;
+    }
+}

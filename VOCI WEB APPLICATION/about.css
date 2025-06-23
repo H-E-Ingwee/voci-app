@@ -1,0 +1,283 @@
+/* about.css - Specific styles for the About Us Page */
+
+/* Page Header / Hero Section */
+.page-header {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center / cover;
+    background-position: center;
+    background-size: cover;
+    min-height: 50vh; /* Shorter than home hero */
+    padding-top: 90px; /* Adjust for fixed navbar */
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    display: flex; /* Use flex to center content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+
+.page-header h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.page-header p.lead {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Our Story Section */
+#our-story {
+    background-color: var(--voci-light-blue); /* Light blue background for this section */
+}
+
+#our-story .story-img-wrapper {
+    position: relative;
+    height: 480px; /* Consistent height for the image */
+    overflow: hidden;
+    border-radius: 15px; /* Apply rounding to the wrapper */
+}
+
+#our-story .story-img-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 15px; /* Apply rounding to the image as well */
+}
+
+#our-story .img-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top right, rgba(30, 144, 255, 0.3), rgba(191, 0, 0, 0.3)); /* Subtle gradient overlay */
+    border-radius: 15px;
+    backdrop-filter: blur(2px); /* Subtle blur for depth */
+}
+
+#our-story .story-quote {
+    position: absolute;
+    bottom: 30px;
+    right: 30px; /* Adjusted to be fully visible and professional */
+    background-color: rgba(26, 42, 68, 0.98); /* More opaque background for text visibility */
+    color: white;
+    padding: 25px;
+    max-width: 80%; /* Ensure it doesn't take up too much width */
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    border: 1px solid var(--voci-gold); /* Professional border */
+    text-align: center;
+}
+
+#our-story .story-quote .fa-quote-left {
+    color: var(--voci-gold);
+    margin-bottom: 10px;
+}
+#our-story .story-quote p.lead {
+    font-size: 1.1rem;
+    line-height: 1.5;
+    margin-bottom: 0;
+    color: white; /* Ensure text is white */
+}
+#our-story .story-quote span {
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+
+/* Vision & Mission Section */
+#vision-mission .vision-mission-card {
+    border: 1px solid #eee;
+    transition: all 0.3s ease;
+    border-radius: 15px; /* Rounded corners */
+    overflow: hidden;
+}
+#vision-mission .vision-mission-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    border-color: var(--voci-blue); /* Highlight on hover */
+}
+
+#vision-mission .icon-box {
+    width: 70px;
+    height: 70px;
+    font-size: 2.2rem;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+    border-radius: 50%; /* Ensure icon boxes are round */
+}
+
+#vision-mission h3 {
+    font-size: 1.8rem;
+}
+
+/* Values Section (More detailed version of home page teaser) */
+#values-section {
+    background-color: var(--voci-white); /* Assuming white for professionalism */
+}
+
+#values-section .value-card {
+    border: 1px solid #ddd;
+    background-color: white;
+    transition: all 0.3s ease;
+    height: 100%; /* Ensure consistent card height */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content to top */
+    align-items: center;
+    padding: 30px;
+    border-radius: 15px; /* Rounded corners */
+}
+#values-section .value-card:hover {
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transform: translateY(-5px);
+    border-color: var(--voci-gold); /* Highlight on hover */
+}
+
+#values-section .value-icon {
+    width: 80px;
+    height: 80px;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border-radius: 50%; /* Ensure value icons are round */
+}
+#values-section .value-card:hover .value-icon {
+    transform: rotateY(180deg) scale(1.1); /* Fun flip effect on hover */
+    background-color: var(--voci-dark-blue) !important; /* Change color on hover */
+}
+
+#values-section h4 {
+    font-size: 1.4rem;
+}
+
+#values-section p.small {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+/* Leadership Team Section */
+#leadership-team .team-member-card {
+    border: 1px solid #eee;
+    background-color: white;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px; /* Consistent padding */
+    border-radius: 15px; /* Rounded corners */
+}
+#leadership-team .team-member-card:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    border-color: var(--voci-red);
+}
+
+#leadership-team .team-member-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid; /* Border will be colored by specific class */
+    margin-bottom: 20px;
+    border-radius: 50%; /* Ensure team images are round */
+}
+
+#leadership-team .team-member-card h4 {
+    font-size: 1.5rem;
+}
+
+#leadership-team .team-member-card p.small {
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+/* Social buttons for team members (square, consistent with footer) */
+#leadership-team .btn-social-square {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid;
+    color: var(--voci-blue); /* Default for team social links */
+}
+#leadership-team .btn-social-square:hover {
+    background-color: var(--voci-blue);
+    color: white;
+}
+/* Overrides for specific team member social colors */
+.team-member-card .border-voci-red + .social-links .btn-outline-voci-red {
+    color: var(--voci-red);
+    border-color: var(--voci-red);
+}
+.team-member-card .border-voci-gold + .social-links .btn-outline-voci-gold {
+    color: var(--voci-gold);
+    border-color: var(--voci-gold);
+}
+.team-member-card .border-voci-dark-blue + .social-links .btn-outline-voci-blue { /* Corrected selector for Michael Brown's border color */
+    color: var(--voci-blue);
+    border-color: var(--voci-blue);
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 767.98px) {
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+    .page-header p.lead {
+        font-size: 1rem;
+    }
+    #our-story .story-img-wrapper {
+        height: 300px; /* Adjust height for mobile */
+    }
+    #our-story .story-quote {
+        position: static; /* Remove absolute positioning on mobile */
+        max-width: 100%;
+        margin-top: 20px;
+        left: 0;
+        right: 0;
+        bottom: auto;
+        transform: none;
+        padding: 15px; /* Smaller padding */
+        text-align: center;
+    }
+    #our-story .story-quote p.lead {
+        font-size: 0.95rem;
+    }
+    #vision-mission .icon-box {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+    #vision-mission h3 {
+        font-size: 1.5rem;
+    }
+    #values-section .value-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.8rem;
+    }
+    #values-section h4 {
+        font-size: 1.2rem;
+    }
+    #leadership-team .team-member-card img {
+        width: 120px;
+        height: 120px;
+    }
+    #leadership-team .team-member-card h4 {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    #our-story .story-quote {
+        right: 15px; /* Adjust for tablet view */
+        max-width: 60%;
+    }
+}

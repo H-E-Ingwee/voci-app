@@ -1,0 +1,307 @@
+/* team.css - Specific styles for the Team Page */
+
+/* Page Header / Hero Section */
+.team-hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') no-repeat center center / cover;
+    background-position: center;
+    background-size: cover;
+    min-height: 50vh;
+    padding-top: 90px;
+    position: relative;
+    overflow: hidden;
+    color: white;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.team-hero-section h1 {
+    font-size: 3.2rem;
+    font-weight: 700;
+}
+
+.team-hero-section p.lead {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Executive Leadership Team & Departmental Leadership sections share team-member-card */
+#executive-team .team-member-card,
+#departmental-leadership .team-member-card {
+    border: 1px solid #eee;
+    background-color: white;
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 30px; /* Consistent padding */
+    border-radius: 15px; /* Rounded corners */
+    text-align: center;
+}
+#executive-team .team-member-card:hover,
+#departmental-leadership .team-member-card:hover {
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    border-color: var(--voci-red); /* Hover highlight */
+}
+
+.team-member-card img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 3px solid; /* Border will be colored by specific class */
+    margin-bottom: 20px;
+    border-radius: 50%; /* Ensure team images are round */
+}
+
+.team-member-card h4 {
+    font-size: 1.5rem;
+    color: var(--voci-dark-blue);
+}
+
+.team-member-card p.small {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--voci-gray-text);
+}
+
+.team-member-card .social-links .btn-social-square {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+    background-color: transparent;
+    border: 1px solid;
+    color: var(--voci-blue); /* Default for team social links */
+}
+.team-member-card .social-links .btn-social-square:hover {
+    background-color: var(--voci-blue);
+    color: white;
+}
+
+/* Overrides for specific team member social colors to match image border */
+.team-member-card .border-voci-red + .social-links .btn-outline-voci-red {
+    color: var(--voci-red);
+    border-color: var(--voci-red);
+}
+.team-member-card .border-voci-gold + .social-links .btn-outline-voci-gold {
+    color: var(--voci-gold);
+    border-color: var(--voci-gold);
+}
+.team-member-card .border-voci-dark-blue + .social-links .btn-outline-voci-blue { /* Corrected selector for Michael Brown's border color */
+    color: var(--voci-blue);
+    border-color: var(--voci-blue);
+}
+
+
+/* Organizational Structure Section */
+#organizational-structure {
+    background-color: var(--voci-light-blue);
+}
+
+.structure-phases .structure-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.structure-phases .structure-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: var(--voci-blue);
+}
+
+.structure-phases .phase-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 15px auto;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.structure-phases h4 {
+    font-size: 1.3rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.structure-phases p.small {
+    text-align: center;
+    color: var(--voci-gray-text);
+}
+
+.structure-phases ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 15px;
+}
+.structure-phases ul li {
+    font-size: 0.9rem;
+    color: var(--voci-gray-text);
+    margin-bottom: 5px;
+    display: flex;
+    align-items: flex-start;
+}
+.structure-phases ul li i {
+    flex-shrink: 0;
+    margin-right: 8px;
+    font-size: 0.8rem;
+    margin-top: 4px;
+}
+
+/* Strategic Roadmap Table */
+.roadmap-table {
+    border-collapse: separate;
+    border-spacing: 0;
+    border-radius: 15px;
+    overflow: hidden; /* Ensures rounded corners on table */
+}
+.roadmap-table thead th {
+    background-color: var(--voci-dark-blue) !important;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    padding: 15px;
+    text-align: center;
+}
+.roadmap-table tbody tr {
+    background-color: white;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.roadmap-table tbody tr:nth-child(odd) {
+    background-color: var(--voci-light-blue); /* Zebra striping */
+}
+.roadmap-table tbody tr:hover {
+    background-color: #e6f3ff; /* Lighter blue on hover */
+    transform: scale(1.01);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+.roadmap-table tbody td {
+    padding: 12px 15px;
+    border-bottom: 1px solid #f0f0f0;
+    color: var(--voci-dark-blue);
+    font-size: 0.95rem;
+    text-align: center;
+}
+.roadmap-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* Procedures and Governance Info Cards */
+.info-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+    text-align: center;
+}
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-color: var(--voci-gold);
+}
+
+.info-card .info-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+.info-card h4 {
+    font-size: 1.35rem;
+    color: var(--voci-dark-blue);
+}
+.info-card p.small {
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 991.98px) {
+    .team-member-card img {
+        width: 120px;
+        height: 120px;
+    }
+    .team-member-card h4 {
+        font-size: 1.3rem;
+    }
+    .team-member-card p.small {
+        font-size: 0.8rem;
+    }
+    .structure-card, .info-card {
+        padding: 25px;
+    }
+    .structure-phases .phase-icon, .info-card .info-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.8rem;
+    }
+    .structure-phases h4, .info-card h4 {
+        font-size: 1.2rem;
+    }
+    .roadmap-table thead th, .roadmap-table tbody td {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .team-hero-section h1 {
+        font-size: 2.5rem;
+    }
+    .team-hero-section p.lead {
+        font-size: 1rem;
+    }
+    .team-member-card img {
+        width: 100px;
+        height: 100px;
+    }
+    .team-member-card h4 {
+        font-size: 1.2rem;
+    }
+    .team-member-card p.small {
+        font-size: 0.75rem;
+    }
+    .structure-card, .info-card {
+        padding: 20px;
+    }
+    .structure-phases .phase-icon, .info-card .info-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.5rem;
+    }
+    .structure-phases h4, .info-card h4 {
+        font-size: 1.1rem;
+    }
+    .roadmap-table {
+        font-size: 0.8rem; /* Smaller table text */
+    }
+    .roadmap-table thead th, .roadmap-table tbody td {
+        padding: 8px;
+    }
+}
